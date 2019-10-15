@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="计算机基础知识,计算机导论,">
+
+
+
+
+
+  <link rel="alternate" href="/" title="在这里" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="第一章 什么是计算机（定义），了解按运算方式分，今天用的大多数是数字计算机（按大小，是微机；大小指CPU的运算速度）  计算机由硬件和软件组成。  硬件分为主机和外设 主机分为CPU和内存 CPU分为运算器和控制器   外设有I/O设备（I/O如何区分以内存为参照物）   软件分为系统软件和应用软件（另一种说法，分为程序和文档）   内存结构  冯诺依曼计算机体系（三句话）  计算机由运算器、控制">
+<meta name="keywords" content="计算机基础知识,计算机导论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="导论复习">
+<meta property="og:url" content="https://www.anjinyang.top/2019/01/07/导论复习/index.html">
+<meta property="og:site_name" content="在这里">
+<meta property="og:description" content="第一章 什么是计算机（定义），了解按运算方式分，今天用的大多数是数字计算机（按大小，是微机；大小指CPU的运算速度）  计算机由硬件和软件组成。  硬件分为主机和外设 主机分为CPU和内存 CPU分为运算器和控制器   外设有I/O设备（I/O如何区分以内存为参照物）   软件分为系统软件和应用软件（另一种说法，分为程序和文档）   内存结构  冯诺依曼计算机体系（三句话）  计算机由运算器、控制">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="f:%5C%E6%96%B0%E6%AF%94%E5%B0%94%E7%9B%96%E8%8C%A8%E7%9A%84%E5%AE%9D%E8%97%8F%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E4%BA%A4%E5%8F%89%E4%BF%A1%E6%81%AF%E7%A0%94%E7%A9%B6%E9%99%A2%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2%5C%E5%AD%A6%E4%B9%A0%5C%E8%80%83%E8%AF%95%5C%E5%A4%8D%E4%B9%A0%5C%E8%BF%9B%E7%A8%8B%E4%B8%89%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png">
+<meta property="og:updated_time" content="2019-06-01T12:29:39.513Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="导论复习">
+<meta name="twitter:description" content="第一章 什么是计算机（定义），了解按运算方式分，今天用的大多数是数字计算机（按大小，是微机；大小指CPU的运算速度）  计算机由硬件和软件组成。  硬件分为主机和外设 主机分为CPU和内存 CPU分为运算器和控制器   外设有I/O设备（I/O如何区分以内存为参照物）   软件分为系统软件和应用软件（另一种说法，分为程序和文档）   内存结构  冯诺依曼计算机体系（三句话）  计算机由运算器、控制">
+<meta name="twitter:image" content="f:%5C%E6%96%B0%E6%AF%94%E5%B0%94%E7%9B%96%E8%8C%A8%E7%9A%84%E5%AE%9D%E8%97%8F%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E4%BA%A4%E5%8F%89%E4%BF%A1%E6%81%AF%E7%A0%94%E7%A9%B6%E9%99%A2%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2%5C%E5%AD%A6%E4%B9%A0%5C%E8%80%83%E8%AF%95%5C%E5%A4%8D%E4%B9%A0%5C%E8%BF%9B%E7%A8%8B%E4%B8%89%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.anjinyang.top/2019/01/07/导论复习/">
+
+
+
+
+
+<!-- 网页加载条 -->
+<script src="https://neveryu.github.io/js/src/pace.min.js"></script>
+  <title>导论复习 | 在这里</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">在这里</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Coding changes the world</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.anjinyang.top/2019/01/07/导论复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ajy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="在这里">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">导论复习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-07T00:00:00+08:00">
+                2019-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
+<li><p>什么是计算机（定义），了解按运算方式分，今天用的大多数是数字计算机（按大小，是微机；大小指CPU的运算速度）</p>
+</li>
+<li><p>计算机由硬件和软件组成。</p>
+<ul>
+<li>硬件分为主机和外设<ul>
+<li>主机分为CPU和内存<ul>
+<li>CPU分为运算器和控制器</li>
+</ul>
+</li>
+<li>外设有I/O设备（I/O如何区分以内存为参照物）</li>
+</ul>
+</li>
+<li>软件分为系统软件和应用软件（另一种说法，分为程序和文档）</li>
+</ul>
+</li>
+<li><p>内存结构</p>
+</li>
+<li><p>冯诺依曼计算机体系（三句话）</p>
+<ol>
+<li>计算机由运算器、控制器、存储器、输入设备、输出设备组成</li>
+<li>数据和程序在计算机中以0/1的形式存在</li>
+<li>程序应该存储在内存中</li>
+</ol>
+</li>
+<li><p>计算机性能指标</p>
+<ul>
+<li>运算速率等</li>
+</ul>
+</li>
+<li><p>巨型化（巨指运算速度）、微型化（微指体积）、网络化</p>
+</li>
+</ul>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>考试考进制转换/<strong><u>二四译码器（考画图，我还不会）</u></strong>/原反补码</p>
+<p>先看看几位存数（例，7为存储数字，有一位是符号位，存储数字的绝对值的用6位）。x=3如何到内存中，编译产生地址，二四译码器寻址打开对应地址的内存，不同字节的相对的位都连在数据线上，3流经数据线，只有对应地址的内存打开，3就进去了。</p>
+<p><strong>（不要掉以轻心，认真检查，一定要冷静）</strong></p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>python</p>
+<p>斐波那契数列和水仙花数<strong>（用心读题，考其中一个，不用心读题就惨了）</strong></p>
+<p>低级语言计算机容易理解，高级语言人容易理解。</p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p>程序设计导引。</p>
+<ul>
+<li><p>常见的数据结构：线性表、栈（1234入可以1234也可以4321出）、队列（先进先出）、二叉树、链表、图。</p>
+</li>
+<li><p>两种设计方法：面向过程，面向对象（尽量模拟现实世界中人的思维进行软件开发）。</p>
+</li>
+<li><p>软件：程序和文档。</p>
+</li>
+<li><p><strong><u>软件生命周期</u></strong>。<strong>（重要）</strong></p>
+</li>
+</ul>
+<p>（可行性分析-需求分析-概要设计-详细设计-编码-调试-运行-维护）</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>操作系统内存管理不考（硬件管理只讲了内存管理）。</p>
+<p>什么是操作系统（是控制和管理计算机系统内各种硬件和软件资源、合理有效地组织计算机系统的工作，为用户提供一个使用方便可扩展的工作环境，从而起到连接计算机和用户的接口作用）</p>
+<p>操作系统分为批处理操作系统、分时操作系统、实时操作系统、嵌入式操作系统</p>
+<p>补充（进程：正在运行的程序。进程的特征：进程实体=pcb+程序+数据）</p>
+<ol>
+<li>进程如何刻画：进程控制块（pcb）<ul>
+<li>进程控制块是描述进程的基本数据结构</li>
+</ul>
+</li>
+<li>进程的四个特征：动态性（进程：进程实体的一次执行过程，有生命周期。程序：程序是一组有序指令的集合，是静态的概念。）、并发性、独立性（同一个程序多个进程的内容不一样）、异步性。<strong>（记住）</strong></li>
+<li>进程的三状态：运行（正在执行）、就绪（其他资源万事俱备只差cpu）、阻塞（等待资源没有运行，不只是等待内存）</li>
+<li>进程三状态转换。<strong>（记住）</strong><img src="F:%5C%E6%96%B0%E6%AF%94%E5%B0%94%E7%9B%96%E8%8C%A8%E7%9A%84%E5%AE%9D%E8%97%8F%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E4%BA%A4%E5%8F%89%E4%BF%A1%E6%81%AF%E7%A0%94%E7%A9%B6%E9%99%A2%E4%B8%8A%E6%B5%B7%E4%BA%A4%E5%A4%A7%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2%5C%E5%AD%A6%E4%B9%A0%5C%E8%80%83%E8%AF%95%5C%E5%A4%8D%E4%B9%A0%5C%E8%BF%9B%E7%A8%8B%E4%B8%89%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png" alt></li>
+</ol>
+<p>CPU调度：抢占（到一定时间看执行谁）/不抢占<strong>【会计算周转时间】</strong></p>
+<h2 id="网络和数据库自行复习"><a href="#网络和数据库自行复习" class="headerlink" title="网络和数据库自行复习"></a>网络和数据库自行复习</h2><p>网络</p>
+<ul>
+<li>网络分层有利于提高工作效率和容错性，增强网络的可扩展性。<ul>
+<li>物理层解决如何在连接各种计算机的传输媒体上传输数据比特流<ul>
+<li>信道复用<ul>
+<li>时分复用：时分复用的所有用户是在不同的时间占用同样的频带宽度</li>
+<li>频分复用：频分复用的所有用户在同样的时间占用不同的带宽资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据链路层：封装成帧，透明传输，差错检测（比特差错）<strong>[基本]</strong></li>
+<li>网络层：找到对方计算机在网络中的位置（IP地址），然后把数据传输给他。网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务。（发送分组无序）<ul>
+<li>子网掩码：将某个IP地址划分成网络地址和主机地址两部分。</li>
+<li>默认网关：<em>一个用于 TCP/IP 协议的配置项，是一个可直接到达的 IP 路由器的 IP 地址。</em></li>
+<li>IP地址</li>
+</ul>
+</li>
+<li>传输层：实现应用程序到应用程序的连接和信息的切分和重组（因为网络层无序，所以接受数据的计算机传输层就需要重组，因为网络层按组传输，所以发送数据的计算机的传输层需要切分，分组）<ul>
+<li>通过端口区分进程</li>
+<li>用户数据报协议UDP（无连接）</li>
+<li>传输控制协议TCP（连接、三次握手）<ul>
+<li>三次握手协议：建立连接、传输数据、释放链接三个步骤。三次握手目的：在不可靠的网络中建立一种可靠的传输方式。三次握手是一种建立连接的方式如下：<ul>
+<li>计算机A：SYN=1，X</li>
+<li>SYN=1所以计算机B知道要A想建立连接，计算机B：SYN=1，ACK=1，X+1，Y</li>
+<li>计算机A检查X+1和ACK是否等于1，若都正确，计算机A：ACK=1，Y+1。计算机B收到后检查Y+1和ACK是否为1后成功建立连接。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>应用层：应用层协议都是为了解决某一类实际应用问题。（应用层针对不同的应用程序设计了不同的应用层协议，这些协议将信息按某种规则、格式进行规范化描述，再通过统一标准化的接口与传输层进行对接。）</li>
+</ul>
+</li>
+<li><strong>消息首先在传输层被切割成多个部分，每一部分都传送到网络中，网络层给每个数据包添加一个头部和尾部，包含了传输目的地的IP地址等信息，紧接着，数据包又被传送到了数据链路层，数据链路层又给数据包加上一个头部和尾部，其中包括了差错校验的信息。最终到物理层转化成01串。</strong>大的互联网是由一个个小网络的路由器组成。发送到对方计算机后，数据链路层出去头部尾部，网络层去掉头部尾部，传输层将多个数据包合成一个数据消息，找到应用程序，传给应用层，最终在对方应用程序中显示消息。</li>
+<li>数据链路层只负责检测，传输层的差错控制可以实现纠错。</li>
+<li>URL（统一资源定位符）：协议+域名+资源路径</li>
+<li>访问一个网页的过程：<ul>
+<li>在计算机上的客户端浏览器上输入百度的网址；</li>
+<li>通过DNS获得这个域名相应的IP地址；</li>
+<li>获得IP地址后，向储存有网页的服务器发出访问请求，服务器接收到了访问请求后在自己的域名下寻找相应的网页；</li>
+<li>服务器找到所请求的网页后，向客户端浏览器上发送一些信息；</li>
+<li>客户端浏览器收到这些信息后，依据这些返回的信息组织成可以查看的网页。</li>
+</ul>
+</li>
+</ul>
+<p>数据库</p>
+<p>关系（relation）—表//元组(tuple)—行//属性(arrtribute)—列</p>
+<p>相关概念</p>
+<ul>
+<li><p>候选码：若关系中的某一属性组的值能唯一地表示一个元组，而其子集不能，则称该属性组为候选码</p>
+</li>
+<li><p><strong>主码：</strong>若一个关系有多个候选码，则选定其中一个为主码<strong>（主码能唯一确定一个元组）</strong></p>
+</li>
+<li><p>主属性：候选码的诸属性称为主属性</p>
+</li>
+<li><p>非主属性：不包含在任何候选码中的属性称为非主属性</p>
+</li>
+<li><p>全码：在最极端的情况下，关系模式的所有属性是这个关系模式的候选码</p>
+</li>
+</ul>
+<p>三类完整性约束：</p>
+<ul>
+<li><p>实体完整性：主属性非空。</p>
+</li>
+<li><p>参照完整性：限定外码的取值为所参照主码的值或者NULL。（选课表作为学生表和课程表的桥梁，CREAT是要作参照说明，参照的学生学号和课程编号必须分别真实存在于学生表和课程表中）</p>
+</li>
+<li><p>用户自定义完整性：不同的关系数据库系统根据其应用环境的不同，往往需要一些特殊的约束条件，是用户根据需求针对某一具体关系数据库的约束。比如性别取值为“男”或“女”。</p>
+</li>
+</ul>
+<p>增删查改</p>
+<ul>
+<li><p>数据库的创建、使用、删除</p>
+<ul>
+<li>CREAT DATEBASE Software Institute;</li>
+<li>USE Software Institute;</li>
+<li>DROP Software Institute;</li>
+</ul>
+</li>
+<li><p>关系的创建、删除，数据的插入、删除、修改、查询</p>
+<ul>
+<li><p>CREAT TABLE Students(id string [列完整性约束],name string,sex,age int……);</p>
+</li>
+<li><p>DROP TABLE Students;</p>
+</li>
+<li><p>INSERT INTO Students(可以只添加某些列的值，也可以全添加)</p>
+<p>VALUES(xx,xxx,……);</p>
+</li>
+<li><p>DELETE FROM Students</p>
+<p>WHERE ……;</p>
+</li>
+<li><p>UPDATE Students</p>
+<p>SET password=’123456’</p>
+<p>WHERE id=’2018000000’;</p>
+</li>
+<li><p>SELECT *(星号代表所有信息，也可以只查某些信息)</p>
+<p>FROM Students</p>
+<p>WHERE id=’2018000000’;</p>
+</li>
+<li><p><strong>期末考试要考察的NULL</strong>(随便举例，NULL代表空，不确定的值)</p>
+<p>SELECT *</p>
+<p>FROM Students</p>
+<p>WHERE grades=NULL;</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>ER图（矩形代表关系，圆矩代表属性，菱形代表联系）属于概念结构设计。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>觉得文章对您有帮助 就请我喝瓶冰阔落吧^_^</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="ajy WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.jpg" alt="ajy Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机基础知识/" rel="tag"># 计算机基础知识</a>
+          
+            <a href="/tags/计算机导论/" rel="tag"># 计算机导论</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/14/web小测复习/" rel="prev" title="web小测复习">
+                web小测复习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/head.jpg" alt="ajy">
+            
+              <p class="site-author-name" itemprop="name">ajy</p>
+              <p class="site-description motion-element" itemprop="description">Coding changes the world</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章"><span class="nav-number">5.</span> <span class="nav-text">第五章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络和数据库自行复习"><span class="nav-number">6.</span> <span class="nav-text">网络和数据库自行复习</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ajy</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
++ <!-- 页面点击小红心 -->
++ <script type="text/javascript" src="/js/src/love.js"></script>
