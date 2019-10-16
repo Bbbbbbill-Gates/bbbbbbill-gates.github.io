@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="小a与黄金街道题目描述：题目连接：https://ac.nowcoder.com/acm/contest/317/D 小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。游戏规则是这样的：假设道路长度为n米(左端点为0，右端点为n)，同时给出一个数k(下面会提到k的用法)设小a初始时的黄金数量">
+<meta name="description" content="小a与黄金街道题目描述：题目连接：https://ac.nowcoder.com/acm/contest/317/D 小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。">
 <meta name="keywords" content="algorithm,数论,欧拉数,快速幂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="牛客网-小a与黄金街道">
 <meta property="og:url" content="https://www.anjinyang.top/2019/06/02/小a与黄金街道欧拉数与快速幂/index.html">
 <meta property="og:site_name" content="好喜欢胖鱼啊啊啊啊啊啊啊">
-<meta property="og:description" content="小a与黄金街道题目描述：题目连接：https://ac.nowcoder.com/acm/contest/317/D 小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。游戏规则是这样的：假设道路长度为n米(左端点为0，右端点为n)，同时给出一个数k(下面会提到k的用法)设小a初始时的黄金数量">
+<meta property="og:description" content="小a与黄金街道题目描述：题目连接：https://ac.nowcoder.com/acm/contest/317/D 小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-02T02:25:13.524Z">
+<meta property="og:updated_time" content="2019-10-16T03:05:26.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客网-小a与黄金街道">
-<meta name="twitter:description" content="小a与黄金街道题目描述：题目连接：https://ac.nowcoder.com/acm/contest/317/D 小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。游戏规则是这样的：假设道路长度为n米(左端点为0，右端点为n)，同时给出一个数k(下面会提到k的用法)设小a初始时的黄金数量">
+<meta name="twitter:description" content="小a与黄金街道题目描述：题目连接：https://ac.nowcoder.com/acm/contest/317/D 小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。">
 
 
 
@@ -368,7 +368,7 @@
 
       
         <h1 id="小a与黄金街道"><a href="#小a与黄金街道" class="headerlink" title="小a与黄金街道"></a>小a与黄金街道</h1><h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><p>题目连接：<a href="https://ac.nowcoder.com/acm/contest/317/D" target="_blank" rel="noopener">https://ac.nowcoder.com/acm/contest/317/D</a></p>
-<p>小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。<br>游戏规则是这样的：<br>假设道路长度为n米(左端点为0，右端点为n)，同时给出一个数k(下面会提到k的用法)设小a初始时的黄金数量为A，小b初始时的黄金数量为B。小a从1出发走向n−1，小b从n−1出发走向1，两人的速度均为1m/s。假设某一时刻(必须为整数)小a的位置为x，小b的位置为y，若gcd(n,x)=1且gcd(n,y)=1，那么小a的黄金数量A会变为A∗k^x(kg)，小b的黄金数量B会变为B∗k^y(kg)，当小a到达n−1时游戏结束小a想知道在游戏结束时A+B的值，答案对10^9+7取模。</p>
+<p>小a和小b来到了一条布满了黄金的街道上。它们想要带几块黄金回去，然而这里的城管担心他们拿走的太多，于是要求小a和小b通过做一个游戏来决定最后得到的黄金的数量。 <a id="more"></a><br>游戏规则是这样的：<br>假设道路长度为n米(左端点为0，右端点为n)，同时给出一个数k(下面会提到k的用法)设小a初始时的黄金数量为A，小b初始时的黄金数量为B。小a从1出发走向n−1，小b从n−1出发走向1，两人的速度均为1m/s。假设某一时刻(必须为整数)小a的位置为x，小b的位置为y，若gcd(n,x)=1且gcd(n,y)=1，那么小a的黄金数量A会变为A∗k^x(kg)，小b的黄金数量B会变为B∗k^y(kg)，当小a到达n−1时游戏结束小a想知道在游戏结束时A+B的值，答案对10^9+7取模。</p>
 <h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一行四个整数n,k,A,B</span><br></pre></td></tr></table></figure>
 
 <h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输出一个整数表示答案</span><br></pre></td></tr></table></figure>
@@ -444,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/02/最短路径floyd、dijkstra、dijkstra+ heap、bellman-flod、spfa/" rel="next" title="最短路径专题">
-                <i class="fa fa-chevron-left"></i> 最短路径专题
+              <a href="/2019/06/02/排序基础/" rel="next" title="排序专题">
+                <i class="fa fa-chevron-left"></i> 排序专题
               </a>
             
           </div>
@@ -454,8 +454,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/02/排序基础/" rel="prev" title="排序专题">
-                排序专题 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/02/小a与轰炸游戏/" rel="prev" title="牛客网-小a与轰炸游戏">
+                牛客网-小a与轰炸游戏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

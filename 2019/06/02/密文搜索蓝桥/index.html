@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="题目描述：福尔摩斯从X星收到一份资料，全部是小写字母组成。他的助手提供了另一份资料：许多长度为8的密码列表。福尔摩斯发现，这些密码是被打乱后隐藏在先前那份资料中的。 请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列可能性。 输入：输入第一行：一个字符串s，全部由小写字母组成，长度小于1024*1024紧接着一行是一个整数n,表示以下有n行密码，1&amp;lt;=n&amp;lt;=1">
+<meta name="description" content="题目描述：福尔摩斯从X星收到一份资料，全部是小写字母组成。他的助手提供了另一份资料：许多长度为8的密码列表。福尔摩斯发现，这些密码是被打乱后隐藏在先前那份资料中的。 请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列">
 <meta name="keywords" content="algorithm,基础算法,stl,蓝桥">
 <meta property="og:type" content="article">
 <meta property="og:title" content="蓝桥杯真题-密文搜索">
 <meta property="og:url" content="https://www.anjinyang.top/2019/06/02/密文搜索蓝桥/index.html">
 <meta property="og:site_name" content="好喜欢胖鱼啊啊啊啊啊啊啊">
-<meta property="og:description" content="题目描述：福尔摩斯从X星收到一份资料，全部是小写字母组成。他的助手提供了另一份资料：许多长度为8的密码列表。福尔摩斯发现，这些密码是被打乱后隐藏在先前那份资料中的。 请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列可能性。 输入：输入第一行：一个字符串s，全部由小写字母组成，长度小于1024*1024紧接着一行是一个整数n,表示以下有n行密码，1&amp;lt;=n&amp;lt;=1">
+<meta property="og:description" content="题目描述：福尔摩斯从X星收到一份资料，全部是小写字母组成。他的助手提供了另一份资料：许多长度为8的密码列表。福尔摩斯发现，这些密码是被打乱后隐藏在先前那份资料中的。 请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-02T02:24:55.970Z">
+<meta property="og:updated_time" content="2019-10-16T03:04:48.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="蓝桥杯真题-密文搜索">
-<meta name="twitter:description" content="题目描述：福尔摩斯从X星收到一份资料，全部是小写字母组成。他的助手提供了另一份资料：许多长度为8的密码列表。福尔摩斯发现，这些密码是被打乱后隐藏在先前那份资料中的。 请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列可能性。 输入：输入第一行：一个字符串s，全部由小写字母组成，长度小于1024*1024紧接着一行是一个整数n,表示以下有n行密码，1&amp;lt;=n&amp;lt;=1">
+<meta name="twitter:description" content="题目描述：福尔摩斯从X星收到一份资料，全部是小写字母组成。他的助手提供了另一份资料：许多长度为8的密码列表。福尔摩斯发现，这些密码是被打乱后隐藏在先前那份资料中的。 请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列">
 
 
 
@@ -368,7 +368,7 @@
 
       
         <h3 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h3><p>福尔摩斯从X星收到一份资料，全部是小写字母组成。他的助手提供了另一份资料：许多长度为8的密码列表。福尔摩斯发现，这些密码是被打乱后隐藏在先前那份资料中的。</p>
-<p>请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列可能性。</p>
+<p>请你编写一个程序，从第一份资料中搜索可能隐藏密码的位置。要考虑密码的所有排列 <a id="more"></a> 可能性。</p>
 <h3 id="输入："><a href="#输入：" class="headerlink" title="输入："></a>输入：</h3><p>输入第一行：一个字符串s，全部由小写字母组成，长度小于1024*1024<br>紧接着一行是一个整数n,表示以下有n行密码，1&lt;=n&lt;=1000<br>紧接着是n行字符串，都是小写字母组成，长度都为8</p>
 <h3 id="输出："><a href="#输出：" class="headerlink" title="输出："></a>输出：</h3><p>一个整数, 表示每行密码的所有排列在s中匹配次数的总和。</p>
 <h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">aaaabbbbaabbcccc</span><br><span class="line">2</span><br><span class="line">aaaabbbb</span><br><span class="line">abcabccc</span><br></pre></td></tr></table></figure>
@@ -442,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/02/前缀和/" rel="next" title="前缀和差分专题">
-                <i class="fa fa-chevron-left"></i> 前缀和差分专题
+              <a href="/2019/06/02/小a与轰炸游戏/" rel="next" title="牛客网-小a与轰炸游戏">
+                <i class="fa fa-chevron-left"></i> 牛客网-小a与轰炸游戏
               </a>
             
           </div>
