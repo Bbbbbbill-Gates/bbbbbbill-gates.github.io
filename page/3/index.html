@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.anjinyang.top/2019/06/02/博弈论专题/">
+    <link itemprop="mainEntityOfPage" href="https://www.anjinyang.top/2019/06/02/搜索专题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ajy">
@@ -286,7 +286,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/02/博弈论专题/" itemprop="url">博弈论专题</a></h1>
+                <a class="post-title-link" href="/2019/06/02/搜索专题/" itemprop="url">搜索专题</a></h1>
         
 
         <div class="post-meta">
@@ -370,16 +370,169 @@
 
       
         
-          <h3 id="巴什博奕"><a href="#巴什博奕" class="headerlink" title="巴什博奕"></a>巴什博奕</h3><p>两个人，n个石子，每次可以取1-m个石子，不能拿的人失败，另一个人胜利</p>
-<ul>
-<li>1 &lt;= 石子数量 &lt;= m 时，先手必胜</li>
-<li>m + 1 = 石子数量 时，先手必败</li>
-<li>m + 2 &lt;= 石子数量 &lt;= 2 * m 时，先手可以让石子数量变为 m + 1 先手必胜</li>
-</ul>
-<p>推广可得</p>
+          <h2 id="棋盘问题"><a href="#棋盘问题" class="headerlink" title="棋盘问题"></a>棋盘问题</h2><p> 在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放k个棋子的所有可行的摆放方案C。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/06/02/博弈论专题/#more" rel="contents">
+            <a class="btn" href="/2019/06/02/搜索专题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.anjinyang.top/2019/06/02/最短路径floyd、dijkstra、dijkstra+ heap、bellman-flod、spfa/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ajy">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好喜欢胖鱼啊啊啊啊啊啊啊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/02/最短路径floyd、dijkstra、dijkstra+ heap、bellman-flod、spfa/" itemprop="url">最短路径专题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T09:43:01+08:00">
+                2019-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="畅通工程续"><a href="#畅通工程续" class="headerlink" title="畅通工程续"></a>畅通工程续</h1><p>Problem Description</p>
+<p>某省自从实行了很多年的畅通工程计划后，终于修建了很多路。不过路多了也不好，每次要从一个城镇到另一个城镇时，都有许多种道路方案可以选择，而某些方案要比另一些方案行走的距离要短很多。这让行人很困扰。</p>
+<p>现在，已知起点和终点，请你计算出要从起点到终点，最短需要行走多少距离。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/02/最短路径floyd、dijkstra、dijkstra+ heap、bellman-flod、spfa/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -540,163 +693,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/06/02/糖果传递/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.anjinyang.top/2019/06/02/结构体与pair洛谷 宇宙大总统/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ajy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/uploads/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="好喜欢胖鱼啊啊啊啊啊啊啊">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/02/结构体与pair洛谷 宇宙大总统/" itemprop="url">洛谷-宇宙大总统</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T09:43:01+08:00">
-                2019-06-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="洛谷-宇宙大总统"><a href="#洛谷-宇宙大总统" class="headerlink" title="洛谷 宇宙大总统"></a>洛谷 宇宙大总统</h1><p>分析：其实就是一道字符串排序，主要学习的写法一结构体，二pair。另外需要牢记比较函数，大于号为降序，小于号为升序。这道题用来熟练stl库。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/06/02/结构体与pair洛谷 宇宙大总统/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -912,7 +908,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.anjinyang.top/2019/06/02/前缀和/">
+    <link itemprop="mainEntityOfPage" href="https://www.anjinyang.top/2019/06/02/结构体与pair洛谷 宇宙大总统/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ajy">
@@ -931,7 +927,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/02/前缀和/" itemprop="url">前缀和差分专题</a></h1>
+                <a class="post-title-link" href="/2019/06/02/结构体与pair洛谷 宇宙大总统/" itemprop="url">洛谷-宇宙大总统</a></h1>
         
 
         <div class="post-meta">
@@ -1015,11 +1011,10 @@
 
       
         
-          <h1 id="激光炸弹"><a href="#激光炸弹" class="headerlink" title="激光炸弹"></a>激光炸弹</h1><p>一种新型的激光炸弹，可以摧毁一个边长为 R 的正方形内的所有的目标。</p>
-<p>现在地图上有 N 个目标，用整数Xi,Yi表示目标在地图上的位置，每个目标都有一个价值Wi。</p>
+          <h1 id="洛谷-宇宙大总统"><a href="#洛谷-宇宙大总统" class="headerlink" title="洛谷 宇宙大总统"></a>洛谷 宇宙大总统</h1><p>分析：其实就是一道字符串排序，主要学习的写法一结构体，二pair。另外需要牢记比较函数，大于号为降序，小于号为升序。这道题用来熟练stl库。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/06/02/前缀和/#more" rel="contents">
+            <a class="btn" href="/2019/06/02/结构体与pair洛谷 宇宙大总统/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1109,7 +1104,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1122,7 +1117,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
